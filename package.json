@@ -1,0 +1,23 @@
+{
+  "name": "blog.digitally.pink",
+  "version": "1.0.0",
+  "description": "Digitally Pink Blog",
+  "main": "index.js",
+  "scripts": {
+    "run": "npx eleventy --serve --input=site",
+    "build": "npx eleventy --inpute=site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitallypink/blog.git"
+  },
+  "keywords": [
+    "Blog",
+    "Eleventy"
+  ],
+  "author": "Obianuju Ezeoke",
+  "homepage": "https://github.com/digitallypink/blog#readme",
+  "dependencies": {
+    "@11ty/eleventy": "0.10.0"
+  }
+}
