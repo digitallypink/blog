@@ -1,0 +1,17 @@
+{
+    "projectName": "blog.digitally.pink",
+    "version": "3.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "none",
+        "config": {
+            "SourceDir": ".",
+            "DistributionDir": "_site",
+            "BuildCommand": "npx eleventy --input=site",
+            "StartCommand": "npx eleventy --serve --input=site"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}
