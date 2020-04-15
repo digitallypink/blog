@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "run": "npx eleventy --serve --input=site",
-    "build": "npx eleventy --inpute=site"
+    "build": "npx eleventy --input=site"
   },
   "repository": {
     "type": "git",
