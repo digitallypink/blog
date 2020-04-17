@@ -4,7 +4,7 @@
   "description": "Digitally Pink Blog",
   "main": "index.js",
   "scripts": {
-    "run": "npx eleventy --serve --input=site",
+    "run": "DEBUG=Eleventy* npx eleventy --serve --input=site",
     "build": "npx eleventy --input=site"
   },
   "repository": {

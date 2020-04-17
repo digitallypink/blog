@@ -1,0 +1,15 @@
+---
+layout: layouts/layout.liquid
+pagination:
+ data: collections.sectionNames
+ size: 1
+ alias: sectionName
+permalink: "{{ sectionName }}/index.html"
+---
+{% assign sectionPages = collections.all | section: sectionName %}
+{% for sectionPage in sectionPages %}
+<div>
+    <h4><a href="{{ sectionPage.url }}">{{ sectionPage.data.pageTitle }}</a></h4>
+    images would be nice
+</div>
+{% endfor %}
