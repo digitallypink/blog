@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx gulp watch & npx eleventy DEBUG=Eleventy* --serve",
-    "build": "npx gulp css & npx eleventy",
+    "build": "npx gulp css && npx eleventy",
     "clean": "rm -rf output node_modules"
   },
   "repository": {
