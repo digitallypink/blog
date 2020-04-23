@@ -6,7 +6,7 @@
         "framework": "none",
         "config": {
             "SourceDir": ".",
-            "DistributionDir": "_site",
+            "DistributionDir": "output/site",
             "BuildCommand": "npx gulp css & npx eleventy",
             "StartCommand": "npx gulp css & npx eleventy --serve"
         }
