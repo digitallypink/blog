@@ -7,8 +7,8 @@
         "config": {
             "SourceDir": ".",
             "DistributionDir": "_site",
-            "BuildCommand": "npx eleventy --input=site",
-            "StartCommand": "npx eleventy --serve --input=site"
+            "BuildCommand": "npx eleventy",
+            "StartCommand": "npx eleventy --serve"
         }
     },
     "providers": [

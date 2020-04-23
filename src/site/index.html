@@ -2,13 +2,7 @@
 layout: layouts/layout.liquid
 pageTitle: Welcome to my blog
 section: Home
-tags: ['Hello']
 ---
-{% for post in collections.posts %}
-    <h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
-    <em>{{ post.date | date: "%Y-%m-%d" }}</em>
-    <br/>
-{% endfor %}
 <h2>Topics</h2>
 {% assign pops = collections.topics %}
 <ul>

@@ -1,12 +1,13 @@
 ---
 layout: layouts/layout.liquid
 pagination:
- data: collections.sectionNames
+ data: sections
  size: 1
- alias: sectionName
-permalink: "{{ sectionName }}/index.html"
+ alias: section
+permalink: "{{ section.url }}/index.html"
 ---
-{% assign sectionPages = collections.all | section: sectionName %}
+<p>{{ section.description }}</p>
+{% assign sectionPages = collections.all | section: section.name %}
 {% for sectionPage in sectionPages %}
 <div>
     <h4><a href="{{ sectionPage.url }}">{{ sectionPage.data.pageTitle }}</a></h4>

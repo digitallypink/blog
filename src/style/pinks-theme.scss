@@ -1,0 +1,8 @@
+@import "theme-base";
+$primary-color: #333;
+$accent-color: #ff1493;
+$complimentary-accent-color: #fae6f5;
+
+@mixin theme-gradient {
+  @include linear-gradient(to right, $accent-color, $complimentary-accent-color)
+}

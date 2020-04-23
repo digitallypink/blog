@@ -4,8 +4,9 @@
   "description": "Digitally Pink Blog",
   "main": "index.js",
   "scripts": {
-    "run": "DEBUG=Eleventy* npx eleventy --serve --input=site",
-    "build": "npx eleventy --input=site"
+    "start": "npx gulp watch & npx eleventy DEBUG=Eleventy* --serve",
+    "build": "npx gulp css & npx eleventy",
+    "clean": "rm -rf output node_modules"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,16 @@
     "Eleventy"
   ],
   "author": "Obianuju Ezeoke",
-  "homepage": "https://github.com/digitallypink/blog#readme",
+  "homepage": "https://blog.digitally.pink",
   "dependencies": {
     "@11ty/eleventy": "0.10.0",
+    "chalk": "^4.0.0",
     "npx": "^10.2.2"
+  },
+  "devDependencies": {
+    "clean-css": "^4.2.3",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "i": "0.3.6"
   }
 }

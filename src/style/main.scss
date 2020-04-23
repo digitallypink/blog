@@ -1,0 +1,24 @@
+@import "pinks-theme";
+
+$font-stack: Helvetica, sans-serif;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: $accent-color
+}
+
+button, input[type=submit]{
+  @include theme-gradient;
+  border-radius: 20%;
+}
+
+a{
+  color: $complimentary-accent-color;
+  &:hover, &:active {
+    color: $accent-color;
+  }
+}

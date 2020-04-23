@@ -1,9 +1,9 @@
-module.exports = (function(eleventyConfig) {
-    const flatten = arrayOfArrays => [].concat.apply([], arrayOfArrays)
-        .filter(item => item && !!item.trim());
-    const allTags = collection => flatten(collection.map(item => item.data.tags))
+const {blogValidation, flatten} = require('./validate_blog')
 
-    eleventyConfig.addFilter("uniqueTags", function(collection) {
+module.exports = (function (eleventyConfig) {
+    const allTags = collection => flatten(collection.map(item => item.data.tags));
+
+    eleventyConfig.addFilter("uniqueTags", function (collection) {
         const uniqueSetOfTags = new Set(allTags(collection));
         return Array.from(uniqueSetOfTags);
     });
@@ -13,9 +13,7 @@ module.exports = (function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter("section", function (collection, section) {
-        const filter = collection.filter(item => item.data.section === section);
-        console.debug("Filter for ", section, "  ", filter);
-        return filter;
+        return collection.filter(item => item.data.section === section);
     })
 
     eleventyConfig.addCollection("sectionNames", function (collection) {
@@ -25,5 +23,18 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addCollection("topics", function (collection) {
         return allTags(collection.getAll());
     });
+
+    //Watch for changes made by gulp
+    eleventyConfig.addWatchTarget("src/site/_includes/layouts/css");
+
+    //Validate all the MUSTS for this blog
+    blogValidation(eleventyConfig);
+
+    return {
+        dir: {
+            output: "output/site",
+            input: "src/site"
+        }
+    }
 });
 
