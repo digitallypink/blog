@@ -7,8 +7,8 @@
         "config": {
             "SourceDir": ".",
             "DistributionDir": "_site",
-            "BuildCommand": "npx eleventy",
-            "StartCommand": "npx eleventy --serve"
+            "BuildCommand": "npx gulp css & npx eleventy",
+            "StartCommand": "npx gulp css & npx eleventy --serve"
         }
     },
     "providers": [
